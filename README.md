@@ -1,40 +1,40 @@
-# Export Information about Assets with MAPI
+# Asset Duplicate Finder
 
-This project provides a web application to find and manage duplicate assets in your asset library using the Management API (MAPI). It allows users to export asset information, view duplicates, and delete unwanted assets.
+This web application helps users find duplicate assets in their asset library. It connects to the Kontent.ai Management API to fetch asset data and identify duplicates based on file names, sizes, and types.
 
 ## Features
 
-- **Environment ID and API Key Input**: Users can input their Environment ID and Management API Key to fetch asset data.
-- **Duplicate Detection**: The application identifies duplicate assets based on file name, size, and type.
+- **Input Fields**: Users can enter their Environment ID and Management API Key to access their assets.
+- **Duplicate Detection**: The application identifies and highlights duplicate assets.
+- **User-Friendly Interface**: A simple and responsive design for easy navigation and interaction.
 
-## Installation
+## Technologies Used
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/repository-name.git
-   ```
+- HTML
+- CSS
+- JavaScript
+- Fetch API for making HTTP requests
 
-2. Navigate to the project directory:
-   ```bash
-   cd repository-name
-   ```
+## How It Works
 
-3. Open `index.html` in your web browser to run the application.
+1. **HTML Structure**: The application consists of a simple HTML layout with input fields for the Environment ID and Management API Key, a button to fetch asset data, and a container to display results.
+
+2. **JavaScript Functionality**:
+   - **Element References**: The script references the necessary HTML elements to interact with user inputs and display results.
+   - **Fetching Data**: It constructs an API request to fetch asset data from the Kontent.ai Management API using the provided credentials.
+   - **Processing Data**: The fetched data is processed to identify duplicates based on file name, size, and type.
+   - **Displaying Results**: A dynamic table is created to display the assets, highlighting any duplicates for easy identification.
 
 ## Usage
 
 1. Enter your Environment ID and Management API Key in the respective input fields.
 2. Click the "Export Assets Info" button to fetch and display asset information.
 3. Review the displayed assets and their duplicates.
-4. Click the "Delete" button next to any asset you wish to remove.
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a pull request or open an issue for any suggestions or improvements.
+Contributions are welcome! Feel free to submit a pull request or open an issue for any suggestions or improvements.
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
