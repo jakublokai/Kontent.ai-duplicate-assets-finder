@@ -1,40 +1,53 @@
 # Asset Duplicate Finder
 
-This web application helps users find duplicate assets in their asset library. It connects to the Kontent.ai Management API to fetch asset data and identify duplicates based on file names, sizes, and types.
+A web application that helps identify duplicate assets in your Kontent.ai asset library using the Management API (MAPI).
 
-## Features
+## Code Specification
 
-- **Input Fields**: Users can enter their Environment ID and Management API Key to access their assets.
-- **Duplicate Detection**: The application identifies and highlights duplicate assets.
-- **User-Friendly Interface**: A simple and responsive design for easy navigation and interaction.
+### Frontend Structure
+- **HTML (`index.html`)**
+  - Single-page application with a clean, responsive design
+  - Input fields for Environment ID and Management API Key
+  - Results display area with three categorized columns
+  - Pastel-colored UI for better visual organization
 
-## Technologies Used
+### JavaScript Functionality (`index.js`)
+1. **Asset Data Fetching**
+   - Connects to Kontent.ai Management API
+   - Uses provided Environment ID and API Key for authentication
+   - Fetches all assets from the specified project
 
-- HTML
-- CSS
-- JavaScript
-- Fetch API for making HTTP requests
+2. **Duplicate Detection Logic**
+   - Categorizes assets into three groups:
+     - `allMatch`: Assets with identical file names, sizes, and types
+     - `sizeAndTypeMatch`: Assets with matching sizes and types but different names
+     - `sizeOrNameMatch`: Assets with matching sizes or names
 
-## How It Works
+3. **Data Processing**
+   - Formats file sizes for better readability
+   - Groups assets based on their properties
+   - Identifies potential duplicates using multiple criteria
 
-1. **HTML Structure**: The application consists of a simple HTML layout with input fields for the Environment ID and Management API Key, a button to fetch asset data, and a container to display results.
+4. **Results Display**
+   - Organizes results in three distinct columns
+   - Each column has a unique pastel color for easy identification
+   - Displays asset names and sizes
+   - Provides clickable links to view assets in Kontent.ai
 
-2. **JavaScript Functionality**:
-   - **Element References**: The script references the necessary HTML elements to interact with user inputs and display results.
-   - **Fetching Data**: It constructs an API request to fetch asset data from the Kontent.ai Management API using the provided credentials.
-   - **Processing Data**: The fetched data is processed to identify duplicates based on file name, size, and type.
-   - **Displaying Results**: A dynamic table is created to display the assets, highlighting any duplicates for easy identification.
+### Color Scheme
+- All Match Column: Soft pink (#FFE5E5)
+- Size and Type Match Column: Soft blue (#E5F4FF)
+- Size or Name Match Column: Soft green (#E5FFE5)
 
-## Usage
+### Error Handling
+- Validates input fields
+- Handles API authentication errors
+- Displays user-friendly error messages
+- Manages loading states
 
-1. Enter your Environment ID and Management API Key in the respective input fields.
-2. Click the "Export Assets Info" button to fetch and display asset information.
-3. Review the displayed assets and their duplicates.
+### Security Features
+- Secure handling of API keys
+- Password field for API key input
+- No local storage of sensitive data
 
-## Contributing
-
-Contributions are welcome! Feel free to submit a pull request or open an issue for any suggestions or improvements.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This application helps content managers identify and manage duplicate assets in their Kontent.ai projects, improving asset organization and reducing storage usage.
