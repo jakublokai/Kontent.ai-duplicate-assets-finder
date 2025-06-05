@@ -2,7 +2,14 @@
 
 A web application that helps identify duplicate assets in your **Kontent.ai** asset library using the **Management API (MAPI)**.
 
-🌐 **Live Demo**: [Try the App](https://6841889df4e673d39066807f--visionary-gumdrop-6eeff0.netlify.app/)
+---
+
+## 🚀 Live Preview
+
+🔗 [**Launch the App**](https://6841889df4e673d39066807f--visionary-gumdrop-6eeff0.netlify.app/)  
+📷 *Preview of the UI:*
+
+![App Preview](https://assets-us-01.kc-usercontent.com/d4e573a8-c3d6-00a9-373b-250d12f0ba1e/9d66b032-d534-43f8-a9a3-7fc53fc0923e/v2%20app.png)
 
 ---
 
